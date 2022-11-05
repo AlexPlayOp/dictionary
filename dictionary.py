@@ -1,6 +1,8 @@
 import random
 
+
 file_name = 'test.txt'
+
 
 def main():
     i = str(input())
@@ -10,7 +12,6 @@ def main():
             print(w.strip())
     if i == "Добавить":
         b = str(input())
-        based.append(b)
     if i == "случайно":
         word_list = read_file(file_name)
         n = int(input('сколько слов? '))
@@ -19,10 +20,11 @@ def main():
             print(word_list[b].strip())
             n -= 1
 
+
 def read_file(file_name):
     with open(file_name, 'r', encoding='utf-8') as f:
         return f.readlines()
 
+
 if __name__ == "__main__":
     main()
-
